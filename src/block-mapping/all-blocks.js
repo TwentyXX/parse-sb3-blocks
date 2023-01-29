@@ -903,32 +903,38 @@ export default {
 };
 
 const effects = {
-    type: 'effect',
     COLOR: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_COLOR',
         defaultMessage: 'color',
     },
     FISHEYE: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_FISHEYE',
         defaultMessage: 'fisheye',
     },
     WHIRL: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_WHIRL',
         defaultMessage: 'whirl',
     },
     PIXELATE: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_PIXELATE',
         defaultMessage: 'pixelate',
     },
     MOSAIC: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_MOSAIC',
         defaultMessage: 'mosaic',
     },
     BRIGHTNESS: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_BRIGHTNESS',
         defaultMessage: 'brightness',
     },
     GHOST: {
+        isBrackety: true,
         translationKey: 'LOOKS_EFFECT_GHOST',
         defaultMessage: 'ghost',
     },
@@ -950,12 +956,13 @@ const backdrops = {
 };
 
 const numberName = {
-    type: 'effect',
     number: {
+        isBrackety: true,
         translationKey: 'LOOKS_NUMBERNAME_NUMBER',
         defaultMessage: 'number',
     },
     name: {
+        isBrackety: true,
         translationKey: 'LOOKS_NUMBERNAME_NAME',
         defaultMessage: 'name',
     },
@@ -1000,28 +1007,33 @@ const keyOptions = {
 };
 
 const keyOptions2 = {
-    type: 'effect',
     space: {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_SPACE',
         defaultMessage: 'space',
     },
     'up arrow': {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_UP',
         defaultMessage: 'up arrow',
     },
     'down arrow': {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_DOWN',
         defaultMessage: 'down arrow',
     },
     'right arrow': {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_RIGHT',
         defaultMessage: 'right arrow',
     },
     'left arrow': {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_LEFT',
         defaultMessage: 'left arrow',
     },
     any: {
+        isBrackety: true,
         translationKey: 'EVENT_WHENKEYPRESSED_ANY',
         defaultMessage: 'any',
     },
@@ -1605,16 +1617,18 @@ export const allMenus = {
         },
     },
     motion_setrotationstyle: {
-        type: 'effect',
         'left-right': {
+            isBrackety: true,
             translationKey: 'MOTION_SETROTATIONSTYLE_LEFTRIGHT',
             defaultMessage: 'left-right',
         },
         "don't rotate": {
+            isBrackety: true,
             translationKey: 'MOTION_SETROTATIONSTYLE_DONTROTATE',
             defaultMessage: "don't rotate",
         },
         'all around': {
+            isBrackety: true,
             translationKey: 'MOTION_SETROTATIONSTYLE_ALLAROUND',
             defaultMessage: 'all around',
         },
@@ -1623,23 +1637,25 @@ export const allMenus = {
     looks_seteffectto: effects,
     looks_switchbackdropto: backdrops,
     looks_gotofrontback: {
-        type: 'effect',
         front: {
+            isBrackety: true,
             translationKey: 'LOOKS_GOTOFRONTBACK_FRONT',
             defaultMessage: 'front',
         },
         back: {
+            isBrackety: true,
             translationKey: 'LOOKS_GOTOFRONTBACK_BACK',
             defaultMessage: 'back',
         },
     },
     looks_goforwardbackwardlayers: {
-        type: 'effect',
         forward: {
+            isBrackety: true,
             translationKey: 'LOOKS_GOFORWARDBACKWARDLAYERS_FORWARD',
             defaultMessage: 'forward',
         },
         backward: {
+            isBrackety: true,
             translationKey: 'LOOKS_GOFORWARDBACKWARDLAYERS_BACKWARD',
             defaultMessage: 'backward',
         },
@@ -1650,28 +1666,31 @@ export const allMenus = {
     sound_seteffectto: soundEffects,
     sound_changeeffectby: soundEffects,
     event_whengreaterthan: {
-        type: 'effect',
         LOUDNESS: {
+            isBrackety: true,
             translationKey: 'EVENT_WHENGREATERTHAN_LOUDNESS',
             defaultMessage: 'loudness',
         },
         TIMER: {
+            isBrackety: true,
             translationKey: 'EVENT_WHENGREATERTHAN_TIMER',
             defaultMessage: 'timer',
         },
     },
     event_whenkeypressed: keyOptions2,
     control_stop: {
-        type: 'effect',
         all: {
+            isBrackety: true,
             translationKey: 'CONTROL_STOP_ALL',
             defaultMessage: 'all',
         },
         'this script': {
+            isBrackety: true,
             translationKey: 'CONTROL_STOP_THIS',
             defaultMessage: 'this script',
         },
         'other scripts in sprite': {
+            isBrackety: true,
             translationKey: 'CONTROL_STOP_OTHER',
             defaultMessage: 'other scripts in sprite',
         },
@@ -1700,12 +1719,13 @@ export const allMenus = {
     },
     sensing_keypressed: keyOptions,
     sensing_setdragmode: {
-        type: 'effect',
         draggable: {
+            isBrackety: true,
             translationKey: 'SENSING_SETDRAGMODE_DRAGGABLE',
             defaultMessage: 'draggable',
         },
         'not draggable': {
+            isBrackety: true,
             translationKey: 'SENSING_SETDRAGMODE_NOTDRAGGABLE',
             defaultMessage: 'not draggable',
         },
@@ -1716,137 +1736,156 @@ export const allMenus = {
             defaultMessage: 'Stage',
         },
         'x position': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_XPOSITION',
             defaultMessage: 'x position',
         },
         'y position': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_YPOSITION',
             defaultMessage: 'y position',
         },
         direction: {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_DIRECTION',
             defaultMessage: 'direction',
         },
         'costume #': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_COSTUMENUMBER',
             defaultMessage: 'costume #',
         },
         'costume name': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_COSTUMENAME',
             defaultMessage: 'costume name',
         },
         size: {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_SIZE',
             defaultMessage: 'size',
         },
         volume: {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_VOLUME',
             defaultMessage: 'volume',
         },
         'backdrop #': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_BACKDROPNUMBER',
             defaultMessage: 'backdrop #',
         },
         'backdrop name': {
-            type: 'effect',
+            isBrackety: true,
             translationKey: 'SENSING_OF_BACKDROPNAME',
             defaultMessage: 'backdrop name',
         },
     },
     sensing_current: {
-        type: 'effect',
         YEAR: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_YEAR',
             defaultMessage: 'year',
         },
         MONTH: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_MONTH',
             defaultMessage: 'month',
         },
         DATE: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_DATE',
             defaultMessage: 'date',
         },
         DAYOFWEEK: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_DAYOFWEEK',
             defaultMessage: 'day of week',
         },
         HOUR: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_HOUR',
             defaultMessage: 'hour',
         },
         MINUTE: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_MINUTE',
             defaultMessage: 'minute',
         },
         SECOND: {
+            isBrackety: true,
             translationKey: 'SENSING_CURRENT_SECOND',
             defaultMessage: 'second',
         },
     },
     operator_mathop: {
-        type: 'effect',
         abs: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_ABS',
             defaultMessage: 'abs',
         },
         floor: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_FLOOR',
             defaultMessage: 'floor',
         },
         ceiling: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_CEILING',
             defaultMessage: 'ceiling',
         },
         sqrt: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_SQRT',
             defaultMessage: 'sqrt',
         },
         sin: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_SIN',
             defaultMessage: 'sin',
         },
         cos: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_COS',
             defaultMessage: 'cos',
         },
         tan: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_TAN',
             defaultMessage: 'tan',
         },
         asin: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_ASIN',
             defaultMessage: 'asin',
         },
         acos: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_ACOS',
             defaultMessage: 'acos',
         },
         atan: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_ATAN',
             defaultMessage: 'atan',
         },
         ln: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_LN',
             defaultMessage: 'ln',
         },
         log: {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_LOG',
             defaultMessage: 'log',
         },
         'e ^': {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_EEXP',
             defaultMessage: 'e ^',
         },
         '10 ^': {
+            isBrackety: true,
             translationKey: 'OPERATORS_MATHOP_10EXP',
             defaultMessage: '10 ^',
         },

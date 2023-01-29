@@ -56,7 +56,16 @@ const getSpecialMessage = (locale, key) => {
 const isSpecialMenuValue = (opcode, value) =>
     Object.prototype.hasOwnProperty.call(allMenus[opcode] || {}, value);
 
-const isBrackety = (opcode) => allMenus[opcode].type === "effect"
+// const isBrackety = (opcode, value) => !!allMenus[opcode]?.[value]?.isBrackety;
+
+const isBrackety = (id, opcode, value) => {
+    if (!id) return true;
+    const a = allMenus[opcode];
+    console.log('a: ', a);
+    const b = a?.[value];
+    console.log('b: ', b);
+    return !!b?.isBrackety;
+};
 
 const getMenuItemForLocale = (locale, opcode, value) => {
     const translationKey = allMenus[opcode][value].translationKey;
@@ -74,5 +83,5 @@ export {
     getMenuItemForLocale,
     getOpcodeFromTranslationKey,
     getTranslationKeyFromValue,
-		isBrackety
+    isBrackety,
 };

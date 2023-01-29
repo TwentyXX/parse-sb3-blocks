@@ -12,7 +12,8 @@ export default class Menu {
         // note: opcode is the opcode of the PARENT block.
         this.opcode = opcode;
         this.content = content;
-        this.isBrackety = isBrackety(opcode);
+				console.log("id: ", id, "opcode: ", opcode, "content: ", content)
+        this.isBrackety = isBrackety(id, opcode, content);
         this.isSpecial = isSpecialMenuValue(opcode, content);
     }
 
@@ -22,7 +23,7 @@ export default class Menu {
 
     toScratchblocks(locale) {
         const a = this.isSpecial ? this.blockSyntax(locale) : this.content;
-        if (this.isBrackety) return `(${Sanitizer.sanitize(a)} v)`;
-        return `[${Sanitizer.sanitize(a)} v]`;
+        if (this.isBrackety) return `[${Sanitizer.sanitize(a)} v]`;
+				return `(${Sanitizer.sanitize(a)} v)`;
     }
 }
