@@ -12,7 +12,7 @@ class Input {
 
 class NumberInput extends Input {
     toScratchblocks() {
-        return `(${this.content})`;
+        return `[${this.content}]`;
     }
 }
 
@@ -30,6 +30,12 @@ class ColorPickerInput extends Input {
 
 class BroadcastMenuInput extends Input {
     toScratchblocks() {
+        return `(${this.content} v)`;
+    }
+}
+
+class EffectMenuInput extends Input {
+    toScratchblocks() {
         return `[${this.content} v]`;
     }
 }
@@ -46,5 +52,6 @@ export {
     StringInput,
     ColorPickerInput,
     BroadcastMenuInput,
+    EffectMenuInput,
     EmptyBooleanInput,
 };

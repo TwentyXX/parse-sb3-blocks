@@ -1,24 +1,3 @@
-import Block from '../block-type/block.js';
-import BooleanBlock from '../block-type/boolean-block.js';
-import CBlock from '../block-type/c-block.js';
-import EBlock from '../block-type/e-block.js';
-import ReporterBlock from '../block-type/reporter-block.js';
-import Variable from '../block-type/variable.js';
-import Definition from '../block-type/definition.js';
-import ProcedureCall from '../block-type/procedure-call.js';
-
-import Icon from '../input/icon.js';
-import Menu from '../input/menu.js';
-import {
-    NumberInput,
-    StringInput,
-    ColorPickerInput,
-    BroadcastMenuInput,
-    EmptyBooleanInput,
-} from '../input/input.js';
-import Stack from '../input/stack.js';
-
-import allBlocks from '../block-mapping/all-blocks.js';
 import {
     BLOCK,
     BOOLEAN_BLOCK,
@@ -26,8 +5,28 @@ import {
     E_BLOCK,
     REPORTER_BLOCK,
 } from '../block-mapping/block-enum.js';
+import {
+    BroadcastMenuInput,
+    ColorPickerInput,
+    EffectMenuInput,
+    EmptyBooleanInput,
+    NumberInput,
+    StringInput,
+} from '../input/input.js';
 
+import Block from '../block-type/block.js';
+import BooleanBlock from '../block-type/boolean-block.js';
+import CBlock from '../block-type/c-block.js';
+import Definition from '../block-type/definition.js';
+import EBlock from '../block-type/e-block.js';
+import Icon from '../input/icon.js';
+import Menu from '../input/menu.js';
+import ProcedureCall from '../block-type/procedure-call.js';
+import ReporterBlock from '../block-type/reporter-block.js';
 import Sanitizer from '../sanitizer.js';
+import Stack from '../input/stack.js';
+import Variable from '../block-type/variable.js';
+import allBlocks from '../block-mapping/all-blocks.js';
 
 const BLOCK_INSERTED_NO_DEFAULT = 2;
 const BLOCK_INSERTED_DEFAULT = 3;
@@ -42,6 +41,7 @@ const inputMap = new Map([
     [9, ColorPickerInput],
     [10, StringInput],
     [11, BroadcastMenuInput],
+    [14, EffectMenuInput],
 ]);
 
 const getInputtablesForBlock = (block, blocks, asScript) => {
@@ -61,7 +61,7 @@ const getInputtablesForBlock = (block, blocks, asScript) => {
             inputtables[key] = new Stack(parseScript(value[1], blocks));
             return;
         }
-        const isInputVariable = Array.isArray(value[1]) && value[1][0] > 11;
+        const isInputVariable = Array.isArray(value[1]) && value[1][0] > 11 && value[1][0] < 14;
         if (
             !isInputVariable &&
             (shadowType === BLOCK_INSERTED_DEFAULT || shadowType === BLOCK_INSERTED_NO_DEFAULT)

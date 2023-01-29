@@ -903,6 +903,7 @@ export default {
 };
 
 const effects = {
+    type: 'effect',
     COLOR: {
         translationKey: 'LOOKS_EFFECT_COLOR',
         defaultMessage: 'color',
@@ -949,6 +950,7 @@ const backdrops = {
 };
 
 const numberName = {
+    type: 'effect',
     number: {
         translationKey: 'LOOKS_NUMBERNAME_NUMBER',
         defaultMessage: 'number',
@@ -971,6 +973,34 @@ const soundEffects = {
 };
 
 const keyOptions = {
+    space: {
+        translationKey: 'EVENT_WHENKEYPRESSED_SPACE',
+        defaultMessage: 'space',
+    },
+    'up arrow': {
+        translationKey: 'EVENT_WHENKEYPRESSED_UP',
+        defaultMessage: 'up arrow',
+    },
+    'down arrow': {
+        translationKey: 'EVENT_WHENKEYPRESSED_DOWN',
+        defaultMessage: 'down arrow',
+    },
+    'right arrow': {
+        translationKey: 'EVENT_WHENKEYPRESSED_RIGHT',
+        defaultMessage: 'right arrow',
+    },
+    'left arrow': {
+        translationKey: 'EVENT_WHENKEYPRESSED_LEFT',
+        defaultMessage: 'left arrow',
+    },
+    any: {
+        translationKey: 'EVENT_WHENKEYPRESSED_ANY',
+        defaultMessage: 'any',
+    },
+};
+
+const keyOptions2 = {
+    type: 'effect',
     space: {
         translationKey: 'EVENT_WHENKEYPRESSED_SPACE',
         defaultMessage: 'space',
@@ -1575,6 +1605,7 @@ export const allMenus = {
         },
     },
     motion_setrotationstyle: {
+        type: 'effect',
         'left-right': {
             translationKey: 'MOTION_SETROTATIONSTYLE_LEFTRIGHT',
             defaultMessage: 'left-right',
@@ -1592,6 +1623,7 @@ export const allMenus = {
     looks_seteffectto: effects,
     looks_switchbackdropto: backdrops,
     looks_gotofrontback: {
+        type: 'effect',
         front: {
             translationKey: 'LOOKS_GOTOFRONTBACK_FRONT',
             defaultMessage: 'front',
@@ -1602,6 +1634,7 @@ export const allMenus = {
         },
     },
     looks_goforwardbackwardlayers: {
+        type: 'effect',
         forward: {
             translationKey: 'LOOKS_GOFORWARDBACKWARDLAYERS_FORWARD',
             defaultMessage: 'forward',
@@ -1617,6 +1650,7 @@ export const allMenus = {
     sound_seteffectto: soundEffects,
     sound_changeeffectby: soundEffects,
     event_whengreaterthan: {
+        type: 'effect',
         LOUDNESS: {
             translationKey: 'EVENT_WHENGREATERTHAN_LOUDNESS',
             defaultMessage: 'loudness',
@@ -1626,8 +1660,9 @@ export const allMenus = {
             defaultMessage: 'timer',
         },
     },
-    event_whenkeypressed: keyOptions,
+    event_whenkeypressed: keyOptions2,
     control_stop: {
+        type: 'effect',
         all: {
             translationKey: 'CONTROL_STOP_ALL',
             defaultMessage: 'all',
@@ -1665,6 +1700,7 @@ export const allMenus = {
     },
     sensing_keypressed: keyOptions,
     sensing_setdragmode: {
+        type: 'effect',
         draggable: {
             translationKey: 'SENSING_SETDRAGMODE_DRAGGABLE',
             defaultMessage: 'draggable',
@@ -1680,43 +1716,53 @@ export const allMenus = {
             defaultMessage: 'Stage',
         },
         'x position': {
+            type: 'effect',
             translationKey: 'SENSING_OF_XPOSITION',
             defaultMessage: 'x position',
         },
         'y position': {
+            type: 'effect',
             translationKey: 'SENSING_OF_YPOSITION',
             defaultMessage: 'y position',
         },
         direction: {
+            type: 'effect',
             translationKey: 'SENSING_OF_DIRECTION',
             defaultMessage: 'direction',
         },
         'costume #': {
+            type: 'effect',
             translationKey: 'SENSING_OF_COSTUMENUMBER',
             defaultMessage: 'costume #',
         },
         'costume name': {
+            type: 'effect',
             translationKey: 'SENSING_OF_COSTUMENAME',
             defaultMessage: 'costume name',
         },
         size: {
+            type: 'effect',
             translationKey: 'SENSING_OF_SIZE',
             defaultMessage: 'size',
         },
         volume: {
+            type: 'effect',
             translationKey: 'SENSING_OF_VOLUME',
             defaultMessage: 'volume',
         },
         'backdrop #': {
+            type: 'effect',
             translationKey: 'SENSING_OF_BACKDROPNUMBER',
             defaultMessage: 'backdrop #',
         },
         'backdrop name': {
+            type: 'effect',
             translationKey: 'SENSING_OF_BACKDROPNAME',
             defaultMessage: 'backdrop name',
         },
     },
     sensing_current: {
+        type: 'effect',
         YEAR: {
             translationKey: 'SENSING_CURRENT_YEAR',
             defaultMessage: 'year',
@@ -1747,6 +1793,7 @@ export const allMenus = {
         },
     },
     operator_mathop: {
+        type: 'effect',
         abs: {
             translationKey: 'OPERATORS_MATHOP_ABS',
             defaultMessage: 'abs',

@@ -1,8 +1,9 @@
 import { default as allBlocks, allMenus } from './all-blocks.js';
-import translations from './translations.js';
+
+import Sanitizer from '../sanitizer.js';
 import localeOptions from './options.js';
 import { specialMessageMap } from './special-messages.js';
-import Sanitizer from '../sanitizer.js';
+import translations from './translations.js';
 
 const _translationKeyToOpcode = {};
 Object.keys(allBlocks).forEach(opcode => {
@@ -55,6 +56,8 @@ const getSpecialMessage = (locale, key) => {
 const isSpecialMenuValue = (opcode, value) =>
     Object.prototype.hasOwnProperty.call(allMenus[opcode] || {}, value);
 
+const isBrackety = (opcode) => allMenus[opcode].type === "effect"
+
 const getMenuItemForLocale = (locale, opcode, value) => {
     const translationKey = allMenus[opcode][value].translationKey;
     if (translations[locale] && translations[locale][translationKey]) {
@@ -71,4 +74,5 @@ export {
     getMenuItemForLocale,
     getOpcodeFromTranslationKey,
     getTranslationKeyFromValue,
+		isBrackety
 };

@@ -1,5 +1,10 @@
+import {
+    getMenuItemForLocale,
+    isBrackety,
+    isSpecialMenuValue,
+} from '../block-mapping/block-mapping.js';
+
 import Sanitizer from '../sanitizer.js';
-import { getMenuItemForLocale, isSpecialMenuValue } from '../block-mapping/block-mapping.js';
 
 export default class Menu {
     constructor(id, opcode, content) {
@@ -7,6 +12,7 @@ export default class Menu {
         // note: opcode is the opcode of the PARENT block.
         this.opcode = opcode;
         this.content = content;
+        this.isBrackety = isBrackety(opcode);
         this.isSpecial = isSpecialMenuValue(opcode, content);
     }
 
@@ -15,7 +21,8 @@ export default class Menu {
     }
 
     toScratchblocks(locale) {
-        if (!this.isSpecial) return `[${Sanitizer.sanitize(this.content)} v]`;
-        return `[${Sanitizer.sanitize(this.blockSyntax(locale))} v]`;
+        const a = this.isSpecial ? this.blockSyntax(locale) : this.content;
+        if (this.isBrackety) return `(${Sanitizer.sanitize(a)} v)`;
+        return `[${Sanitizer.sanitize(a)} v]`;
     }
 }
